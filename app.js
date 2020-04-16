@@ -55,11 +55,29 @@ function animateSlides() {
   });
 }
 
-// cursor animation
-function cursor(e) {
-  console.log(e);
-}
-window.addEventListener("mousemove", cursor);
+// cursor overlay
+let mouse = document.querySelector(".cursor");
 
-cursor();
+function cursor(e) {
+  mouse.style.top = e.pageY + "px";
+  mouse.style.left = e.pageX + "px";
+}
+
+function activeCursor(e) {
+  const item = e.target;
+  if (item.id === "logo" || item.classList.contains("burger")) {
+    mouse.classList.add("nav-active")
+  } else {
+    mouse.classList.remove("nav-active");
+  } if (item.classList.contains("explore")) {
+    mouse.classList.add("explore-active")
+  } else {
+    mouse.classList.remove("explore-active")
+  }
+}
+
+window.addEventListener("mousemove", cursor);
+window.addEventListener("mouseover", activeCursor)
+
+
 animateSlides();
