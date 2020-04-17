@@ -96,7 +96,7 @@ function navToggle(e) {
     gsap.to(".line2", 0.5, { opacity: 1 });
     gsap.to(".line3", 0.5, { rotate: 0, y: 0, background: "white", });
     gsap.to(".nav-bar", 0.75, { clipPath: "circle(50px at 100% -10%)" });
-    gsap.to("#logo", 0.75, { color: "black" });
+    gsap.to("#logo", 0.75, { color: "white" });
   }
 }
 
