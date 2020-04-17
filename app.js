@@ -78,6 +78,29 @@ function activeCursor(e) {
   }
 }
 
+// burger
+const burger = document.querySelector(".burger");
+
+// toggling menu
+function navToggle(e) {
+  if (!e.target.classList.contains("active")) {
+    e.target.classList.add("active");
+    gsap.to(".line1", 0.5, { rotate: 45, y: 10, background: "black",});
+    gsap.to(".line2", 0.5, { opacity: 0 });
+    gsap.to(".line3", 0.5, { rotate: -45, y: -9, background: "black", });
+    gsap.to(".nav-bar", 0.75, { clipPath: "circle(3000px at 100% -10%)" });
+    gsap.to("#logo", 0.75, { color: "black" });
+  } else {
+    e.target.classList.remove("active")
+    gsap.to(".line1", 0.5, { rotate: 0, y: 0, background: "white",});
+    gsap.to(".line2", 0.5, { opacity: 1 });
+    gsap.to(".line3", 0.5, { rotate: 0, y: 0, background: "white", });
+    gsap.to(".nav-bar", 0.75, { clipPath: "circle(50px at 100% -10%)" });
+    gsap.to("#logo", 0.75, { color: "black" });
+  }
+}
+
+window.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor)
 
