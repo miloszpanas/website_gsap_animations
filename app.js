@@ -70,9 +70,11 @@ function activeCursor(e) {
   } else {
     mouse.classList.remove("nav-active");
   } if (item.classList.contains("explore")) {
-    mouse.classList.add("explore-active")
+    mouse.classList.add("explore-active");
+    gsap.to(".title-swipe", 1, { y: "0%" }, "-=0.5")
   } else {
     mouse.classList.remove("explore-active")
+    gsap.to(".title-swipe", 1, { y: "100%" }, "-=0.5")
   }
 }
 
