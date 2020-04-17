@@ -90,6 +90,8 @@ function navToggle(e) {
     gsap.to(".line3", 0.5, { rotate: -45, y: -9, background: "black", });
     gsap.to(".nav-bar", 0.75, { clipPath: "circle(3000px at 100% -10%)" });
     gsap.to("#logo", 0.75, { color: "black" });
+    // get rid of scroll while in menu
+    document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active")
     gsap.to(".line1", 0.5, { rotate: 0, y: 0, background: "white",});
@@ -97,6 +99,7 @@ function navToggle(e) {
     gsap.to(".line3", 0.5, { rotate: 0, y: 0, background: "white", });
     gsap.to(".nav-bar", 0.75, { clipPath: "circle(50px at 100% -10%)" });
     gsap.to("#logo", 0.75, { color: "white" });
+    document.body.classList.remove("hide");
   }
 }
 
