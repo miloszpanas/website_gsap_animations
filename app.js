@@ -103,7 +103,7 @@ function navToggle(e) {
   }
 }
 
-window.addEventListener("click", navToggle);
+burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor)
 
