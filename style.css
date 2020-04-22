@@ -296,3 +296,67 @@ body.hide {
   background: rgb(255, 139, 93);
   z-index: 3;
 }
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-desc {
+    padding: 0;
+  }
+  .hero-desc h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0rem;
+  }
+  .hero-img {
+    padding: 1rem;
+  }
+  .hero-desc p {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  .reveal-text {
+    display: none
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+  .fashion-text p {
+    margin-bottom: 5rem;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .fashion-text h1 {
+    margin: 2rem 0rem;
+    font-size: 3rem;
+  }
+  .nav-bar {
+    display: block;
+  }
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 7rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .contact p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

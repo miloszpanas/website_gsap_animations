@@ -30,7 +30,7 @@ function animateSlides() {
       reverse: false
     })
     .setTween(slideTimeline)
-    .addIndicators({ colorStart: "white", colorTrigger: "white" })
+    // .addIndicators({ colorStart: "white", colorTrigger: "white" })
     .addTo(controller)
 
     // new animation
@@ -43,12 +43,12 @@ function animateSlides() {
       duration: "100%",
       triggerHook: 0,
     })
-    .addIndicators({
-      colorStart: "white",
-      colorTrigger: "white",
-      name: "page",
-      indent: 200
-    })
+    // .addIndicators({
+    //   colorStart: "white",
+    //   colorTrigger: "white",
+    //   name: "page",
+    //   indent: 200
+    // })
     .setPin(slide, { pushFollowers: false })
     .setTween(pageTimeline)
     .addTo(controller)
